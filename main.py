@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
-"""Build the make.fun entry image for the news-image-20261117 bounty."""
+"""Build the make.fun entry image for the news-image-20261117 bounty.
+
+This script generates a 1024x1024 AI-generated image summarizing 17 November 2026 world news
+for the make.fun bounty. The image includes:
+- A magenta background with dark blue panels
+- News categories (Geopolitics, Science, Sport, Markets)
+- Story summaries for each category
+- A cheering agent character
+- "VICTORY!" text at the bottom
+- Generated in /output directory as entry.png
+
+The script uses PIL to create the image with dynamic text rendering and styling.
+"""
 
 import os
 from PIL import Image, ImageDraw, ImageFont
@@ -12,7 +24,6 @@ MUTED = (170, 180, 205)
 ACCENT = (200, 30, 45)
 FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 FONT_BOLD_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-
 
 def main() -> None:
     img = Image.new("RGB", (CANVAS_W, CANVAS_H), BG)
@@ -72,7 +83,6 @@ def main() -> None:
     out = os.path.join(out_dir, "entry.png")
     img.save(out, format="PNG")
     return out
-
 
 if __name__ == "__main__":
     p = main()
