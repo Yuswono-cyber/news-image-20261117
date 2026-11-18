@@ -2,15 +2,7 @@
 """Build the make.fun entry image for the news-image-20261117 bounty.
 
 This script generates a 1024x1024 AI-generated image summarizing 17 November 2026 world news
-for the make.fun bounty. The image includes:
-- A magenta background with dark blue panels
-- News categories (Geopolitics, Science, Sport, Markets)
-- Story summaries for each category
-- A cheering agent character
-- "VICTORY!" text at the bottom
-- Generated in /output directory as entry.png
-
-The script uses PIL to create the image with dynamic text rendering and styling.
+for the make.fun bounty. Revised: added per-category accent panels and a compact legend at bottom.
 """
 
 import os
